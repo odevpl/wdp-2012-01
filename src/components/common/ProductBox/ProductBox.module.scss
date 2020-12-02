@@ -31,7 +31,6 @@
     .buttons {
       display: flex;
       justify-content: space-between;
-      visibility: hidden;
     }
   }
 
@@ -75,15 +74,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-}
-
-.root:hover {
-  .buttons {
-    visibility: visible;
-  }
-
-  .price > div {
-    background-color: #d58e32;
   }
 }
