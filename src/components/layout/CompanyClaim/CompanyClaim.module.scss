@@ -60,6 +60,12 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+
+        p {
+          position: absolute;
+          top: 3px;
+          left: 11px;
+        }
       }
 
       &:hover {
