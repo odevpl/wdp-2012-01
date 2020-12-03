@@ -71,11 +71,8 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
-<<<<<<< HEAD
   image: PropTypes.string,
-=======
   oldPrice: PropTypes.number,
->>>>>>> add old price <div> in ProductBox
 };
 
 export default ProductBox;
