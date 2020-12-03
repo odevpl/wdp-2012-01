@@ -45,6 +45,7 @@ const initialState = {
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
       favorites: false,
+      toCompare: true,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -71,6 +72,7 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      toCompare: true,
     },
     {
       id: 'aenean-ru-bristique-6',
