@@ -17,7 +17,7 @@
       margin-top: 15px;
       &:hover {
         ul {
-          display:block;
+          display: block;
           position: absolute;
           background-color: white;
           border: solid 0.5px $form-border-color;
@@ -27,7 +27,7 @@
       li {
         padding-right: 25px;
         ul {
-          display:none;
+          display: none;
         }
         a{
           text-decoration: none;
