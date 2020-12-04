@@ -11,16 +11,16 @@ const ProductSearch = () => (
     <div className={styles.category}>
       <ul name='' id=''>
         <li>
-          <a href='#'>Select a category</a>
+          <a href='/#'>Select a category</a>
           <ul>
             <li>
-              <a href='#'>Furniture</a>
+              <a href='/#'>Furniture</a>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <a href='/#'>Chair</a>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <a href='/#'>Table</a>
             </li>
           </ul>
         </li>

@@ -15,27 +15,27 @@ const MenuBar = ({ children }) => (
         <div className={'col-auto ' + styles.menu}>
           <ul>
             <li>
-              <a href='#' className={styles.active}>
+              <div href='#' className={styles.active}>
                 Home
-              </a>
+              </div>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <div href='#'>Furniture</div>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <div href='#'>Chair</div>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <div href='#'>Table</div>
             </li>
             <li>
-              <a href='#'>Sofa</a>
+              <div href='#'>Sofa</div>
             </li>
             <li>
-              <a href='#'>Bedroom</a>
+              <div href='#'>Bedroom</div>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <div href='#'>Blog</div>
             </li>
           </ul>
         </div>

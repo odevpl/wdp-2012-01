@@ -24,7 +24,7 @@
       }
     }
 
-    a {
+    div {
       color: $text-color;
       text-transform: uppercase;
       font-size: 12px;
@@ -41,6 +41,7 @@
         background-color: $primary;
         color: $menu-bar-white;
         border-color: $primary;
+        cursor: pointer;
       }
 
       &.active {

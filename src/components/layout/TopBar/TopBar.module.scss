@@ -12,13 +12,14 @@
       display: inline-block;
       line-height: 55px;
 
-      a {
+      .topBarTile {
         color: $top-bar-link-color;
         font-size: 13px;
 
         &:hover {
           color: $primary;
           text-decoration: none;
+          cursor: pointer;
         }
       }
     }
