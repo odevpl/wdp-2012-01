@@ -39,3 +39,27 @@
     color: #ffffff;
   }
 }
+
+.favorites {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #d58e32;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 22px;
+  background: #d58e32;
+}
+
+.noFavorites {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #2a2a2a;
+  color: #2a2a2a;
+  font-size: 13px;
+  line-height: 22px;
+
+  &:not(.noHover):hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+}
