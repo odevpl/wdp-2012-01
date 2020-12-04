@@ -80,3 +80,23 @@
     }
   }
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .col {
+    flex: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .col {
+    flex: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .emptySpot {
+    flex: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
