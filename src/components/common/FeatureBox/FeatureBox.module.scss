@@ -77,3 +77,19 @@
     }
   }
 }
+
+@media(max-width:775px) {
+  .root {
+    height: 75%;
+  }
+  h5 {
+    padding: 0 10px 10px 10px;
+  }
+}
+
+
+@media(max-width:415px) and (max-height:740px) {
+  h5 {
+    padding: 0 17px 17px 17px;
+  }
+}
