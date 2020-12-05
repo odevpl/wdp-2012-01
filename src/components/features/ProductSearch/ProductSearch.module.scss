@@ -12,6 +12,29 @@
     align-items: center;
     position: relative;
 
+    ul {
+      list-style-type: none;
+      margin-top: 15px;
+      &:hover {
+        ul {
+          display:block;
+          position: absolute;
+          background-color: white;
+          border: solid 0.5px $form-border-color;
+          margin-top: 0px;
+        }
+      }
+      li {
+        padding-right: 25px;
+        ul {
+          display:none;
+        }
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+
     .icon:first-child {
       color: $primary;
       position: absolute;
