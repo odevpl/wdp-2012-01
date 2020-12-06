@@ -64,3 +64,24 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .root {
+    height: 54px;
+    .searchField {
+      width: 68px;
+      input {
+        display: none;
+      }
+      button {
+        margin-left: 18px;
+      }
+    }
+  } 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+      margin-left: 70px;
+  }
+}
