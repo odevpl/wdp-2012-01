@@ -11,7 +11,17 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, image }) => (
+const ProductBox = ({
+  name,
+  price,
+  promo,
+  stars,
+  image,
+  oldPrice,
+  favorites,
+  id,
+  changeFavorites,
+}) => (
   <div className={styles.root}>
     <div className={styles.photo}>
       <img alt='furnitureImage' src={image} className={styles.image}></img>
@@ -41,13 +51,25 @@ const ProductBox = ({ name, price, promo, stars, image }) => (
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline'>
+        <Button
+          noHover
+          onClick={() => changeFavorites(id)}
+          variant={favorites ? 'active' : 'disactive'}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
+      {oldPrice ? (
+        <div className={styles.oldPrice}>
+          <div className={styles.oldPriceValue}>$ {oldPrice}</div>
+        </div>
+      ) : (
+        ''
+      )}
+
       <div className={styles.price}>
         <Button noHover variant='small'>
           $ {price}
@@ -64,6 +86,10 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   image: PropTypes.string,
+  oldPrice: PropTypes.number,
+  favorites: PropTypes.bool,
+  id: PropTypes.string,
+  changeFavorites: PropTypes.func,
 };
 
 export default ProductBox;

@@ -1,15 +1,15 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
+  background-color: $btn-color-white;
+  border: 1px solid $product-box-border;
   margin-bottom: 2rem;
 
   .photo {
     position: relative;
     padding: 10px;
     background: {
-      color: #f4f5f7;
+      color: $product-box-photo-color;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -22,9 +22,9 @@
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $product-box-bgc;
       border-radius: 50%;
-      color: #ffffff;
+      color: $btn-color-white;
       padding: 30px 15px 5px 15px;
     }
 
@@ -55,14 +55,14 @@
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $product-link-color;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid $product-link-border;
     position: relative;
 
     &::before {
@@ -81,5 +81,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .oldPrice {
+
+      .oldPriceValue {
+        font-size: 17px;
+        color: rgb(109, 106, 106);
+        position: relative;
+        padding: 5px;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          background: rgb(7, 7, 7);
+          display: block;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
   }
 }
