@@ -22,16 +22,16 @@ const Footer = ({ children }) => (
               <h6>Information</h6>
               <ul>
                 <li>
-                  <a href='#'>About us</a>
+                  <p>About us</p>
                 </li>
                 <li>
-                  <a href='#'>Policy</a>
+                  <p>Policy</p>
                 </li>
                 <li>
-                  <a href='#'>Conditions</a>
+                  <p>Conditions</p>
                 </li>
                 <li>
-                  <a href='#'>Online support</a>
+                  <p>Online support</p>
                 </li>
               </ul>
             </div>
@@ -41,16 +41,16 @@ const Footer = ({ children }) => (
               <h6>My account</h6>
               <ul>
                 <li>
-                  <a href='#'>Login</a>
+                  <p>Login</p>
                 </li>
                 <li>
-                  <a href='#'>My cart</a>
+                  <p>My cart</p>
                 </li>
                 <li>
-                  <a href='#'>Wishlist</a>
+                  <p>Wishlist</p>
                 </li>
                 <li>
-                  <a href='#'>Checkout</a>
+                  <p>Checkout</p>
                 </li>
               </ul>
             </div>
@@ -60,16 +60,16 @@ const Footer = ({ children }) => (
               <h6>Information</h6>
               <ul>
                 <li>
-                  <a href='#'>Specials</a>
+                  <p>Specials</p>
                 </li>
                 <li>
-                  <a href='#'>New products</a>
+                  <p>New products</p>
                 </li>
                 <li>
-                  <a href='#'>Best Sellers</a>
+                  <p>Best Sellers</p>
                 </li>
                 <li>
-                  <a href='#'>Out Stores</a>
+                  <p>Out Stores</p>
                 </li>
               </ul>
             </div>
@@ -79,16 +79,16 @@ const Footer = ({ children }) => (
               <h6>Orders</h6>
               <ul>
                 <li>
-                  <a href='#'>Payment options</a>
+                  <p>Payment options</p>
                 </li>
                 <li>
-                  <a href='#'>Shipping and delivery</a>
+                  <p href='#'>Shipping and delivery</p>
                 </li>
                 <li>
-                  <a href='#'>Returns</a>
+                  <p href='#'>Returns</p>
                 </li>
                 <li>
-                  <a href='#'>Shipping</a>
+                  <p>Shipping</p>
                 </li>
               </ul>
             </div>
@@ -107,32 +107,32 @@ const Footer = ({ children }) => (
           <div className={'col text-right ' + styles.socialMedia}>
             <ul>
               <li>
-                <a href='#'>
+                <a href='https://twitter.com/'>
                   <FontAwesomeIcon icon={faTwitter}>Twitter</FontAwesomeIcon>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='https://www.facebook.com/'>
                   <FontAwesomeIcon icon={faFacebookF}>Facebook</FontAwesomeIcon>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='https://www.youtube.com/'>
                   <FontAwesomeIcon icon={faYoutube}>YouTube</FontAwesomeIcon>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='https://myaccount.google.com/'>
                   <FontAwesomeIcon icon={faGooglePlusG}>Google Plus</FontAwesomeIcon>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='https://pl.linkedin.com/'>
                   <FontAwesomeIcon icon={faLinkedinIn}>LinkedIn</FontAwesomeIcon>
                 </a>
               </li>
               <li>
-                <a href='#'>
+                <a href='https://pl.pinterest.com/'>
                   <FontAwesomeIcon icon={faPinterestP}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>

@@ -5,39 +5,45 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
 import styles from './MenuBar.module.scss';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHamburger } from '@fortawesome/free-solid-svg-icons';
+
 const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className='col'>
-          <ProductSearch />
-        </div>
         <div className={'col-auto ' + styles.menu}>
           <ul>
             <li>
-              <a href='#' className={styles.active}>
+              <div href='#' className={styles.active}>
                 Home
-              </a>
+              </div>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <div href='#'>Furniture</div>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <div href='#'>Chair</div>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <div href='#'>Table</div>
             </li>
             <li>
-              <a href='#'>Sofa</a>
+              <div href='#'>Sofa</div>
             </li>
             <li>
-              <a href='#'>Bedroom</a>
+              <div href='#'>Bedroom</div>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <div href='#'>Blog</div>
             </li>
           </ul>
+        </div>
+        <button className={styles.hamburger}>
+          <FontAwesomeIcon className={styles.icon} icon={faHamburger} />
+        </button>
+        <div className='col'>
+          <ProductSearch />
         </div>
       </div>
     </div>

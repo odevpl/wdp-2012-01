@@ -42,7 +42,7 @@
           margin: 0 0.5rem;
           font-weight: 600;
 
-          a {
+          div {
             color: $furniture-link-color;
             position: relative;
             text-decoration: none;
@@ -51,6 +51,8 @@
 
             &.active,
             &:hover {
+              cursor: pointer;
+
               &::before {
                 content: "";
                 position: absolute;
@@ -81,7 +83,7 @@
           display: inline-block;
           margin-left: 0.5rem;
 
-          a {
+          div {
             display: block;
             width: 13px;
             height: 13px;
@@ -92,6 +94,7 @@
             &.active,
             &:hover {
               background-color: $primary;
+              cursor: pointer;
             }
           }
         }

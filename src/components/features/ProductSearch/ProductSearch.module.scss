@@ -29,8 +29,9 @@
         ul {
           display:none;
         }
-        a{
-          text-decoration: none;
+        p {
+          margin-bottom: 0;
+          cursor: pointer;
         }
       }
     }
@@ -85,5 +86,27 @@
       background-color: transparent;
       outline: none;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    height: 54px;
+    .searchField {
+      width: 52px;
+      width: 52px;
+      input {
+        display: none;
+      }
+      button {
+        margin-left: 12px;
+      }
+    }
+  } 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+      margin-left: 70px;
   }
 }
