@@ -8,6 +8,7 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    visible: true,
   };
 
   handlePageChange(newPage) {
@@ -16,6 +17,19 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  componentDidUpdate(_prevProps, prevState) {
+    if (
+      this.state.activeCategory !== prevState.activeCategory ||
+      this.state.activePage !== prevState.activePage
+    ) {
+      setTimeout(() => this.setState({ visible: true }), 1000);
+    }
+  }
+
+  handleFadeOut() {
+    this.setState({ visible: false });
   }
 
   render() {
@@ -30,8 +44,11 @@ class NewFurniture extends React.Component {
       dots.push(
         <li key={i}>
           <div
-            onClick={() => this.handlePageChange(i)}
-            className={i === activePage ? styles.active : undefined}
+            onClick={() => {
+              this.handlePageChange(i);
+              this.handleFadeOut();
+            }}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </div>
@@ -52,10 +69,11 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <div
-                        className={
-                          item.id === activeCategory ? styles.active : undefined
-                        }
-                        onClick={() => this.handleCategoryChange(item.id)}
+                        className={item.id === activeCategory ? styles.active : ''}
+                        onClick={() => {
+                          this.handleCategoryChange(item.id);
+                          this.handleFadeOut();
+                        }}
                       >
                         {item.name}
                       </div>
@@ -68,7 +86,11 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div
+            className={`row ${
+              this.state.visible ? `${styles.fadeIn}` : `${styles.fadeOut}`
+            }`}
+          >
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
               <div key={item.id} className='col-3'>
                 <ProductBox changeFavorites={this.props.changeFavorites} {...item} />
