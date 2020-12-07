@@ -7,6 +7,9 @@
   :global(.container) > :global(.row) {
     height: 84px;
   }
+  .hamburger {
+    display: none;
+  }
 
   .menu {
     display: flex;
@@ -47,6 +50,48 @@
       &.active {
         border-color: $text-color;
       }
+    }
+  }
+}
+
+
+
+@media (max-width: 767px) {
+   .root {
+     box-shadow: none;
+     height: 10px;
+      .hamburger {
+        width: 52px;
+        height: 52px;
+        display: block !important;
+        margin-top: -5px;
+     }
+     &:hover {
+      ul {
+        display: block !important;
+        z-index:1;
+        background-color: #ffffff;
+        border: #ffffff;
+      }
+      .hamburger {
+        display: none !important;
+      }
+      form {
+        display: none !important;
+      }
+     }
+      ul {
+        display: none !important;
+      }
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .root {
+    height: 145px;
+    .menu {
+      padding: 10px 10px 10px 10px;
+      margin-left: 58px;
     }
   }
 }
