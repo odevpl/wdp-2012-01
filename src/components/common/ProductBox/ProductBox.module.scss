@@ -53,9 +53,14 @@
     }
 
     .stars {
-      a {
+      div {
         text-decoration: none;
         color: $product-link-color;
+        display: inline;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

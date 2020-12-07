@@ -30,6 +30,11 @@
       display: inline-block;
       position: relative;
       color: $company-cart-color;
+      background-color: $header-bg;
+      border: none;
+      outline: 0;
+      &:hover {
+      cursor: pointer;}
 
       .cartIcon {
         background-color: $primary;
@@ -73,6 +78,14 @@
         }
       }
     }
+  }
+
+  .logo{
+    background-color: $header-bg;
+    border: none;
+    outline: 0;
+    &:hover {
+    cursor: pointer;}
   }
 }
 

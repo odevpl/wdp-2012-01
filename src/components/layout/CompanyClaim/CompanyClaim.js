@@ -16,20 +16,20 @@ const CompanyClaim = () => (
             222
           </p>
         </div>
-        <div className={`col text-center ${styles.logo}`}>
-          <a href='#'>
-            <img className={styles.logo} src='/images/logo.png' alt='Bazar' />
-          </a>
+        <div className='col text-center'>
+          <button className={styles.logo}>
+            <img src='/images/logo.png' alt='Bazar' />
+          </button>
         </div>
         <div className={`col text-right ${styles.cart}`}>
-          <a href='#' className={styles.cartBox}>
+          <button className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>
             <div className={styles.cartCounter}>
               <p>0</p>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
