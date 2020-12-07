@@ -11,7 +11,8 @@
     li {
       display: inline-block;
       line-height: 55px;
-
+      
+      a,
       .topBarTile {
         color: $top-bar-link-color;
         font-size: 13px;
@@ -40,4 +41,50 @@
       margin-right: 5px;
     }
   }
+}
+
+
+@media(max-width:450px) {
+  
+  .topMenu ul li {
+    margin-left: 0;
+
+    a {
+      font-size: 0;
+    }    
+    
+    .icon {
+      font-size: 13px;
+    }
+}
+
+
+.topOptions ul li {
+  // padding: 0;
+  display: inline;
+  .icon {
+    margin-left: 1px;
+  }
+}
+
+.topOptions {
+  padding: 0 0 0 10px;
+  flex-grow:2;
+}
+
+
+.topMenu {
+  padding: 0 10px 0 0;
+}
+
+.root {
+  .topMenu{
+    ul {
+      li {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
 }
