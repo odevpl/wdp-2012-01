@@ -48,7 +48,7 @@ class NewFurniture extends React.Component {
               this.handlePageChange(i);
               this.handleFadeOut();
             }}
-            className={i === activePage && styles.active}
+            className={i === activePage ? styles.active : ''}
           >
             page {i}
           </div>
@@ -69,7 +69,7 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <div
-                        className={item.id === activeCategory && styles.active}
+                        className={item.id === activeCategory ? styles.active : ''}
                         onClick={() => {
                           this.handleCategoryChange(item.id);
                           this.handleFadeOut();
