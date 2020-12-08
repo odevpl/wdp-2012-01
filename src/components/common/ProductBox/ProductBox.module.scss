@@ -112,3 +112,13 @@
 
   }
 }
+
+@media(max-width:775px) {
+  .root {
+    .photo {
+      .image {
+        max-width: 100%;
+      }
+    }
+  }
+}
