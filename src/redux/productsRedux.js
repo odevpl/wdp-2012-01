@@ -10,6 +10,11 @@ export const toggleFavorite = (products, id) =>
     return product;
   });
 
+export const changeActivePage = (activePage, change) => {
+  activePage = activePage + change;
+  return activePage;
+};
+
 export const getNew = ({ products }) => {
   return products.filter(item => item.newFurniture === true);
 };

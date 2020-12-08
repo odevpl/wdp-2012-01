@@ -1,14 +1,28 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Carousel from '../../common/SwipeCarousel/SwipeCarousel';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     visible: true,
+  };
+
+  changeActivePage = (activePage, change) => {
+    if (change === 1) {
+      return this.setState({
+        activePage: activePage + 1,
+      });
+    } else if (change === -1) {
+      return this.setState({
+        activePage: activePage - 1,
+      });
+    }
   };
 
   handlePageChange(newPage) {
@@ -86,17 +100,38 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div
-            className={`row ${
-              this.state.visible ? `${styles.fadeIn}` : `${styles.fadeOut}`
-            }`}
+          <Carousel
+            activePage={this.state.activePage}
+            changeActivePage={(activeP, change) => {
+              if (change === 1) {
+                return this.setState({
+                  activePage: activeP === dots.length - 1 ? activeP : activeP + 1,
+                });
+              } else if (change === -1) {
+                return this.setState({
+                  activePage: activeP === 0 ? activeP : activeP - 1,
+                });
+              }
+            }}
           >
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className={`col-3 ${styles.column}`}>
-                <ProductBox changeFavorites={this.props.changeFavorites} {...item} />
-              </div>
-            ))}
-          </div>
+            <div
+              className={`row ${
+                this.state.visible ? `${styles.fadeIn}` : `${styles.fadeOut}`
+              }`}
+            >
+              {categoryProducts
+                .slice(activePage * 8, (activePage + 1) * 8)
+                .map(item => (
+                  <div key={item.id} className='col-3'>
+                    <ProductBox
+                      changeFavorites={this.props.changeFavorites}
+                      {...item}
+                    />
+                  </div>
+                ))}
+            </div>
+          </Carousel>
+          <div className='styles.carousel'></div>
         </div>
       </div>
     );
@@ -106,6 +141,7 @@ class NewFurniture extends React.Component {
 NewFurniture.propTypes = {
   children: PropTypes.node,
   changeFavorites: PropTypes.func,
+  changeActivePage: PropTypes.func,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -131,3 +167,4 @@ NewFurniture.defaultProps = {
 };
 
 export default NewFurniture;
+
