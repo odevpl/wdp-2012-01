@@ -10,11 +10,15 @@ export const toggleFavorite = (products, id) =>
     return product;
   });
 
-export const changeActivePage = (activePage, change) => {
-  activePage = activePage + change;
-  console.log('activePage: ', activePage);
-  return activePage;
-};
+// export const changeActivePage = (activePage, change) => {
+//   if(change === 1){
+//     return this.setState({
+//       activePage: activePage + 1 });}
+
+//   else if(change === -1){
+//     return this.setState({
+//       activePage: activePage - 1 });}
+// };
 
 export const getNew = ({ products }) => {
   return products.filter(item => item.newFurniture === true);
