@@ -7,9 +7,11 @@ import {
   faStar,
   faExchangeAlt,
   faShoppingBasket,
+  faEye,
 } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
+import Timer from '../../features/Timer/Timer';
 
 const ProductBox = ({
   name,
@@ -21,17 +23,47 @@ const ProductBox = ({
   favorites,
   id,
   changeFavorites,
+  featured,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      {featured && (
+        <div className={styles.hotDeals}>
+          {' '}
+          <div className={styles.hotDealsTitle}>HOT DEALS</div>{' '}
+          <div className={styles.dots}>
+            <ul>
+              <li>
+                <div></div>
+              </li>
+              <li>
+                <div></div>
+              </li>
+              <li>
+                <div></div>
+              </li>
+            </ul>{' '}
+          </div>
+        </div>
+      )}
       <img alt='furnitureImage' src={image} className={styles.image}></img>
-
-      {promo && <div className={styles.sale}>{promo}</div>}
+      {featured ? (
+        <div className={styles.productTimer}>
+          <Timer startDate={new Date().getTime() + 2592000000} />
+        </div>
+      ) : null}
+      {featured ? null : promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
+        {featured ? null : <Button variant='small'>Quick View</Button>}
+        {featured ? (
+          <Button className={styles.featuredButton} variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          </Button>
+        ) : (
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          </Button>
+        )}
       </div>
     </div>
     <div className={styles.content}>
@@ -51,6 +83,9 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
+        <Button variant='outline'>
+          <FontAwesomeIcon icon={faEye}>Watch</FontAwesomeIcon>
+        </Button>
         <Button
           noHover
           onClick={() => changeFavorites(id)}
@@ -90,6 +125,7 @@ ProductBox.propTypes = {
   favorites: PropTypes.bool,
   id: PropTypes.string,
   changeFavorites: PropTypes.func,
+  featured: PropTypes.bool,
 };
 
 export default ProductBox;

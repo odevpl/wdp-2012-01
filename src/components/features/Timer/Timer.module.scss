@@ -1,0 +1,31 @@
+@import "../../../styles/settings.scss";
+
+.timer {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+}
+.timer > div {
+  padding: 10px;
+  background: #444;
+  color: #fff;
+  font-size: 10px;
+  margin-right: 2px;
+  width: 100px;
+  justify-content: center;
+  border-radius: 50%;
+}
+.timer > div > span {
+  font-size: 13px;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.expired {
+  font-size: 10px;
+  color: rgb(126, 49, 49);
+  border: 1px solid rgb(126, 49, 49);
+  padding: 10px;
+}
