@@ -12,6 +12,7 @@ export const toggleFavorite = (products, id) =>
 
 export const changeActivePage = (activePage, change) => {
   activePage = activePage + change;
+  console.log('activePage: ', activePage);
   return activePage;
 };
 
