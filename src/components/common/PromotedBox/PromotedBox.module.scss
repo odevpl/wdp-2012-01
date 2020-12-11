@@ -1,0 +1,66 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $btn-color-white;
+  border: 1px solid $product-box-border;
+  margin-bottom: 2rem;
+  display: flex;
+  max-height: 431px;
+
+  .image {
+    position: relative;
+    object-fit: cover;
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $product-box-bgc;
+    background-color: white;
+    font-weight: bold;
+    z-index: 1;
+    padding: 10px;
+  }
+
+  .col {
+    padding: 0;
+  }
+
+  .promotedText {
+    text-align: center;
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 70%;
+    background-color: $product-box-bgc;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h2 {
+      font-size: 15px;
+    }
+  }
+
+  .slider {
+    display: flex;
+    font-size: 20px;
+    background-color: $product-box-bgc;
+    a {
+      flex: 50%;
+      justify-content: center;
+      color: white;
+    }
+  }
+
+  .slider:hover {
+    background-color: $primary;
+  }
+}

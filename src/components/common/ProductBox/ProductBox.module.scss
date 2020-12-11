@@ -5,6 +5,13 @@
   border: 1px solid $product-box-border;
   margin-bottom: 2rem;
 
+  .hotDeals {
+    background-color: $product-box-bgc;
+    color: $btn-color-white;
+    padding: 10px;
+    position: relative;
+  }
+
   .photo {
     position: relative;
     padding: 10px;
@@ -88,7 +95,6 @@
     align-items: center;
 
     .oldPrice {
-
       .oldPriceValue {
         font-size: 17px;
         color: rgb(109, 106, 106);
@@ -96,7 +102,7 @@
         padding: 5px;
 
         &:after {
-          content: '';
+          content: "";
           width: 100%;
           height: 2px;
           background: rgb(7, 7, 7);
@@ -109,7 +115,62 @@
         }
       }
     }
+  }
 
+  .dots {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    ul {
+      margin-right: 0.5rem;
+      padding: 0 0 0 1rem;
+      list-style: none;
+      transform: translateY(10px);
+
+      li {
+        display: inline-block;
+        margin-left: 0.5rem;
+
+        div {
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: $furniture-link-bgc;
+          font-size: 0;
+
+          &.active,
+          &:hover {
+            background-color: $primary;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .featuredButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  }
+}
+
+.productTimer {
+  visibility: hidden;
+}
+
+.root:hover {
+  .featuredButton {
+    visibility: visible;
+    font-size: 12px;
+  }
+
+  .productTimer {
+    visibility: visible;
   }
 }
 
