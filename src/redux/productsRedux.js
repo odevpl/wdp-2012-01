@@ -23,7 +23,7 @@ export const getNew = ({ products }) => {
 };
 
 /* action name creator */
-const reducerName = 'favorites';
+const reducerName = 'products';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */

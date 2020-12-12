@@ -1,7 +1,5 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Carousel from '../../common/SwipeCarousel/SwipeCarousel';
@@ -11,6 +9,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     visible: true,
+    comparingList: [],
   };
 
   changeActivePage = (activePage, change) => {
@@ -48,12 +47,23 @@ class NewFurniture extends React.Component {
 
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, comparingList } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const dots = [];
+
+    products.map(product => {
+      const filteredList = comparingList.filter(item => item.id === product.id);
+      if (product.compare && filteredList[0]) {
+        return '';
+      } else if (product.compare) {
+        comparingList.push(product);
+        return comparingList;
+      }
+    });
+
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>

@@ -6,7 +6,6 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
-  comparingList: [],
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -20,7 +19,7 @@ const initialState = {
       image:
         'https://www.fortywinks.com.au/getmedia/f4614e1e-9b00-476b-bdcd-e28afa3d34db/jackson_bed_frame-front.jpg?width=1200',
       favorites: true,
-      compare: false,
+      compare: true,
     },
     {
       id: 'aenean-ru-bristique-2',
