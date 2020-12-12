@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+// import useMediaQuery from '@material-ui/core/useMediaQuery';
+// import MainLayout from '../../layout/MainLayout';
 
 class NewFurniture extends React.Component {
   state = {
