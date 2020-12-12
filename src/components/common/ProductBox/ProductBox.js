@@ -26,6 +26,7 @@ const ProductBox = ({
   featured,
   changeCompare,
   compare,
+  comparingList,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -98,7 +99,11 @@ const ProductBox = ({
         <Button
           noHover
           onClick={() => {
-            changeCompare(id);
+            if (comparingList.find(item => item.id === id)) {
+              changeCompare(id);
+            } else if (comparingList.length <= 3) {
+              changeCompare(id);
+            }
           }}
           variant={compare ? 'active' : 'disactive'}
         >
@@ -137,6 +142,7 @@ ProductBox.propTypes = {
   changeCompare: PropTypes.func,
   makeComparingList: PropTypes.func,
   compare: PropTypes.bool,
+  comparingList: PropTypes.array,
 };
 
 export default ProductBox;

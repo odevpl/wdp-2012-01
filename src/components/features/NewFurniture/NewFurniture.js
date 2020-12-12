@@ -136,6 +136,7 @@ class NewFurniture extends React.Component {
                   <ProductBox
                     changeCompare={this.props.changeCompare}
                     changeFavorites={this.props.changeFavorites}
+                    comparingList={comparingList}
                     {...item}
                   />
                   </div>
