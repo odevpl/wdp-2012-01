@@ -9,7 +9,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     visible: true,
-    comparingList: [],
+    comparinList: [],
   };
 
   changeActivePage = (activePage, change) => {
@@ -46,24 +46,19 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
-    const { activeCategory, activePage, comparingList } = this.state;
+    const {
+      categories,
+      products,
+      changeFavorites,
+      changeCompare,
+      getCompared,
+    } = this.props;
+    const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const dots = [];
-
-    products.map(product => {
-      const filteredList = comparingList.filter(item => item.id === product.id);
-      if (product.compare && filteredList[0]) {
-        return '';
-      } else if (product.compare) {
-        comparingList.push(product);
-        return comparingList;
-      }
-    });
-
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li key={i}>
@@ -136,7 +131,7 @@ class NewFurniture extends React.Component {
                   <ProductBox
                     changeCompare={this.props.changeCompare}
                     changeFavorites={this.props.changeFavorites}
-                    comparingList={comparingList}
+                    changeCompare={changeCompare}
                     {...item}
                   />
                   </div>
@@ -151,6 +146,8 @@ class NewFurniture extends React.Component {
 }
 
 NewFurniture.propTypes = {
+  getCompared: PropTypes.array,
+  changeCompare: PropTypes.func,
   children: PropTypes.node,
   changeFavorites: PropTypes.func,
   changeActivePage: PropTypes.func,

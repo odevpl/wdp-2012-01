@@ -6,6 +6,7 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  comparingList: [],
   products: [
     {
       id: 'aenean-ru-bristique-1',

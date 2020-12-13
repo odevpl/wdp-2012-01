@@ -1,6 +1,9 @@
 /* selectors */
 export const getAll = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
+export const getCompared = ({ products }) => {
+  return products.filter(item => item.compare === true);
+};
 
 export const toggleFavorite = (products, id) =>
   products.map(product => {
