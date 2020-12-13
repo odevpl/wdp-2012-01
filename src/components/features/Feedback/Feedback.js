@@ -40,7 +40,7 @@ const Feedback = () => (
         <div className={styles.client}>
           <img
             src='https://projects.kodilla.com/secure/useravatar?avatarId=10349'
-            alt='photo 1'
+            alt='avatar1'
           ></img>
           <div>
             <h4>Anna K.</h4>
