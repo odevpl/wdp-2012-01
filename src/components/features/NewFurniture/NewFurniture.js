@@ -10,7 +10,6 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     visible: true,
   };
-
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
@@ -55,7 +54,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
