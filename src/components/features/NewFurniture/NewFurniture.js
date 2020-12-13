@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Carousel from '../../common/SwipeCarousel/SwipeCarousel';
+import ComparedBox from '../../common/ComparedBox/ComparedBox';
 
 class NewFurniture extends React.Component {
   state = {
@@ -140,6 +141,7 @@ class NewFurniture extends React.Component {
           </Carousel>
           <div className='styles.carousel'></div>
         </div>
+        <ComparedBox getCompared={getCompared} />
       </div>
     );
   }
