@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useSelector, useState, useDispatch } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
@@ -13,17 +13,22 @@ function useWindowWidth() {
     };
     window.addEventListener('resize', handleResize);
   }, []);
-  if (width <= 767) {
-    return width + 'px' + ' ' + 'Mobile';
-  } else if (768 <= width && width <= 1024) {
-    return width + 'px' + ' ' + 'Tablet';
-  } else if (width > 1025) {
-    return width + 'px' + ' ' + 'Desktop';
-  }
+  return width;
 }
 
 const MainLayout = ({ children }) => {
+  // const dispatch = useDispatch();
   console.log(useWindowWidth());
+
+  // const getWidth = () =>  {
+  //   dispatch({
+  //     type: "CHANGE_SCREEN_WIDTH",
+  //     payload: {
+  //       screenWidth: screenWidth,
+  //     }
+  //   })
+  // }
+
   return (
     <div>
       <Header />

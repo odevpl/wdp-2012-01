@@ -479,6 +479,7 @@ const initialState = {
   cart: {
     products: [],
   },
+  screenWidth: 1440,
 };
 
 export default initialState;
