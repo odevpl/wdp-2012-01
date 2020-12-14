@@ -141,7 +141,7 @@ class NewFurniture extends React.Component {
           </Carousel>
           <div className='styles.carousel'></div>
         </div>
-        <ComparedBox getCompared={getCompared} />
+        <ComparedBox getCompared={getCompared} changeCompare={changeCompare} />
       </div>
     );
   }

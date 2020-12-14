@@ -19,7 +19,7 @@ const initialState = {
       image:
         'https://www.fortywinks.com.au/getmedia/f4614e1e-9b00-476b-bdcd-e28afa3d34db/jackson_bed_frame-front.jpg?width=1200',
       favorites: true,
-      compare: true,
+      compare: false,
     },
     {
       id: 'aenean-ru-bristique-2',
