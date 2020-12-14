@@ -17,18 +17,7 @@ function useWindowWidth() {
 }
 
 const MainLayout = ({ children }) => {
-  // const dispatch = useDispatch();
   console.log(useWindowWidth());
-
-  // const getWidth = () =>  {
-  //   dispatch({
-  //     type: "CHANGE_SCREEN_WIDTH",
-  //     payload: {
-  //       screenWidth: screenWidth,
-  //     }
-  //   })
-  // }
-
   return (
     <div>
       <Header />
