@@ -129,12 +129,13 @@ class NewFurniture extends React.Component {
                 .slice(activePage * 8, (activePage + 1) * 8)
                 .map(item => (
                   <div key={item.id} className='col-3'>
-                  <ProductBox
-                    changeCompare={this.props.changeCompare}
-                    changeFavorites={this.props.changeFavorites}
-                    changeCompare={changeCompare}
-                    {...item}
-                  />
+                    <ProductBox
+                      changeCompare={changeCompare}
+                      changeFavorites={changeFavorites}
+                      changeCompare={changeCompare}
+                      getCompared={getCompared}
+                      {...item}
+                    />
                   </div>
                 ))}
             </div>
@@ -179,4 +180,3 @@ NewFurniture.defaultProps = {
 };
 
 export default NewFurniture;
-

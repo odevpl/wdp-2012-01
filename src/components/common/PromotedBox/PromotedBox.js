@@ -15,7 +15,7 @@ const PromotedBox = ({ products, changeFavorites, changeCompare, getCompared }) 
             key={item.id}
             changeFavorites={changeFavorites}
             changeCompare={changeCompare}
-            comparingList={getCompared}
+            getCompared={getCompared}
             {...item}
           />
         </div>
