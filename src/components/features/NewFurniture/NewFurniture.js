@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -69,7 +68,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -167,4 +165,3 @@ NewFurniture.defaultProps = {
 };
 
 export default NewFurniture;
-
