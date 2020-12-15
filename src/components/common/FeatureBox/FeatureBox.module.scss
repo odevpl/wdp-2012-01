@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
     outline: 0;
+    transition: $transition1;
+    background-position: 100% 0;
 
     .icon {
       position: relative;
@@ -60,14 +62,16 @@
 
   }
 
-  &:hover,
-  &.active {
+  &:hover {
     .iconWrapper {
       color: $feature-box-white;
 
       &::after {
+        background-position: 0 100%;
         background-color: $primary;
+        color: $menu-bar-white;
         border-color: $primary;
+        background-image: $background-image;
       }
     }
 
