@@ -1,0 +1,423 @@
+@import "../../../styles/settings.scss";
+
+.container {
+  margin-bottom: 80px;
+}
+
+.column {
+  width: 555px;
+  height: 420px;
+  position: relative;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+  }
+
+  .wrapperText {
+    position: absolute;
+    bottom: 45px;
+    left: 53px;
+    color: $Promotions-border-color;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 60px;
+
+  }
+
+  p {
+    width: 160px;
+    font-family: "Poppins - Semi Bold";
+    font-size: 50px;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid $Promotions-border-color;
+  }
+}
+
+.column1 {
+  border-radius: 5%;
+  position: relative;
+  width: 555px;
+  height: 200px;
+  background-color: $second-column-bgc;
+
+  img {
+    border-radius: 5%;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .firstChair {
+    top: 0;
+    right: 0;
+  }
+
+  .secondChair {
+    top: 0;
+    left: 0;
+  }
+
+  .secondWrapper {
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+
+    h1 {
+      font-size: 30px;
+      display: inline-block;
+      font-family: "Poppins Light";
+    }
+
+    h1.boldText {
+      font-weight: 600;
+      font-family: Poppins;
+      padding-right: 10px;
+    }
+
+    h5 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 3.6px;
+    }
+
+    p {
+      margin: 0;
+      color: $paragraph-promotions-second-color;
+      font-family: "Poppins - Semi Bold";
+      font-size: 36px;
+      line-height: 54px;
+    }
+  }
+}
+
+.column2 {
+  margin-top: 20px;
+  width: 555px;
+  height: 200px;
+  border-radius: 5%;
+  position: relative;
+  background-color: $third-column-bgc;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+  }
+
+  .thirdWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    color: $paragraph-promotions-second-color;
+    font-size: 24px;
+    font-weight: 300;
+
+    .paragraphNormal {
+      padding-left: 10px;
+      display: inline-block;
+      margin: 0;
+      font-family: "Poppins Light";
+    }
+
+    .paragraphBold {
+      display: inline-block;
+      margin: 0;
+      font-weight: 800;
+    }
+
+    .paragraphInfo {
+      margin: 0;
+      color: $paragraph-promotions-color;
+      font-size: 18px;
+      line-height: 54px;
+      line-height: normal;
+      transform: translateX(20px);
+    }
+  }
+}
+
+.column::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $column-before-bgc;
+  opacity: 0.4;
+  border-radius: 5%;
+}
+
+
+@media(max-width:1025px) {
+  .container {
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 18px;
+        }
+
+        p.paragraphInfo {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:775px) {
+  .container {
+    .column {
+      .wrapperText {
+        h2 {
+          font-size: 30px;
+        }
+
+        h1 {
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 35px;
+          width: 140px;
+        }
+      }
+    }
+
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 16px;
+        }
+
+        h5 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 12px;
+        }
+
+        p.paragraphInfo {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:830px) and (max-height:415px) {
+  .container {
+    .column {
+      .wrapperText {
+        h2 {
+          font-size: 25px;
+        }
+
+        h1 {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 25px;
+          width: 120px;
+        }
+      }
+    }
+
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 17px;
+        }
+
+        h5 {
+          font-size: 13px;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 14px;
+        }
+
+        p.paragraphInfo {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:740px) {
+  .container {
+    .column {
+      padding: 0 15px;
+      margin-bottom: 20px;
+      height: 300px;
+    }
+
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 25px;
+        }
+
+        h5 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 20px;
+        }
+
+        p.paragraphInfo {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:420px) {
+  .container {
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 18px;
+        }
+
+        h5 {
+          font-size: 14px;
+          padding-bottom: 0;
+        }
+
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 13px;
+        }
+
+        p.paragraphInfo {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media(max-width:320px) {
+  .container {
+    .column {
+      .wrapperText {
+        h2 {
+          font-size: 20px;
+        }
+
+        h1 {
+          font-size: 35px;
+        }
+
+        p {
+          padding: 5px;
+          font-size: 25px;
+          width: 100px;
+        }
+      }
+    }
+
+    .column1 {
+      .secondWrapper {
+        h1 {
+          font-size: 15px;
+        }
+
+        h5 {
+          font-size: 12px;
+          padding-bottom: 0;
+        }
+
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .column2 {
+      .thirdWrapper {
+        p {
+          font-size: 10px;
+        }
+
+        p.paragraphInfo {
+          font-size: 10px;
+          transform: translate(0);
+        }
+      }
+    }
+  }
+}
