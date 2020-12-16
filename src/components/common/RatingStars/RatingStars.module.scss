@@ -1,0 +1,24 @@
+@import "../../../styles/settings.scss";
+
+
+.component {
+  div {
+    text-decoration: none;
+    color: $product-link-color;
+    display: inline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .myRatingActive {
+    color: $primary;
+  }
+
+
+  .myRatingDeactive {
+    color: $primary;
+  }
+
+}
