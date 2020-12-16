@@ -515,6 +515,27 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  Promotion: {
+    sofa:
+      'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    firstChair:
+      'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    secondChair:
+      'https://images.pexels.com/photos/2180883/pexels-photo-2180883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    bed:
+      'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    text1a: 'GUEST ROOM',
+    text1b: 'SOFA',
+    textbargain: '-20%',
+    text2a: 'OFFICE ',
+    text2b: 'CHAIR',
+    text2c: 'COLLECTION',
+    textPrice: '$200.00',
+    text3a: 'SPECIAL',
+    text3b: 'COLLECTION',
+    textInfo: 'SAVE UP 45% OF FURNITURE',
+  },
 };
 
 export default initialState;

@@ -24,7 +24,6 @@ class NewFurniture extends React.Component {
       });
     }
   };
-
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
@@ -75,7 +74,6 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
-
     return (
       <div className={styles.root}>
         <div className='container'>
