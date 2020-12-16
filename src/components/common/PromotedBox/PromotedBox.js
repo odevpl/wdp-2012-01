@@ -4,7 +4,7 @@ import ProductBox from '../ProductBox/ProductBox';
 import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 
-const PromotedBox = ({ products, changeFavorites }) => {
+const PromotedBox = ({ products, changeFavorites, changeCompare, getCompared }) => {
   const productId = products.filter(item => item.id === 'aenean-ru-bristique-1');
   return (
     <div className={styles.root}>
@@ -14,6 +14,8 @@ const PromotedBox = ({ products, changeFavorites }) => {
             featured={true}
             key={item.id}
             changeFavorites={changeFavorites}
+            changeCompare={changeCompare}
+            getCompared={getCompared}
             {...item}
           />
         </div>
@@ -43,8 +45,10 @@ const PromotedBox = ({ products, changeFavorites }) => {
 };
 
 PromotedBox.propTypes = {
+  changeCompare: PropTypes.func,
   changeFavorites: PropTypes.func,
   featured: PropTypes.bool,
+  getCompared: PropTypes.array,
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

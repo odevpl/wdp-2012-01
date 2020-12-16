@@ -1,16 +1,16 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Carousel from '../../common/SwipeCarousel/SwipeCarousel';
+import ComparedBox from '../../common/ComparedBox/ComparedBox';
 
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
     visible: true,
+    comparinList: [],
   };
 
   changeActivePage = (activePage, change) => {
@@ -47,7 +47,13 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const {
+      categories,
+      products,
+      changeFavorites,
+      changeCompare,
+      getCompared,
+    } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
@@ -124,7 +130,10 @@ class NewFurniture extends React.Component {
                 .map(item => (
                   <div key={item.id} className='col-3'>
                     <ProductBox
-                      changeFavorites={this.props.changeFavorites}
+                      changeCompare={changeCompare}
+                      changeFavorites={changeFavorites}
+                      changeCompare={changeCompare}
+                      getCompared={getCompared}
                       {...item}
                     />
                   </div>
@@ -133,15 +142,19 @@ class NewFurniture extends React.Component {
           </Carousel>
           <div className='styles.carousel'></div>
         </div>
+        <ComparedBox getCompared={getCompared} changeCompare={changeCompare} />
       </div>
     );
   }
 }
 
 NewFurniture.propTypes = {
+  getCompared: PropTypes.array,
+  changeCompare: PropTypes.func,
   children: PropTypes.node,
   changeFavorites: PropTypes.func,
   changeActivePage: PropTypes.func,
+  changeCompare: PropTypes.func,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -167,4 +180,3 @@ NewFurniture.defaultProps = {
 };
 
 export default NewFurniture;
-
