@@ -130,7 +130,6 @@ class NewFurniture extends React.Component {
                 .map(item => (
                   <div key={item.id} className='col-3'>
                     <ProductBox
-                      changeCompare={changeCompare}
                       changeFavorites={changeFavorites}
                       changeCompare={changeCompare}
                       getCompared={getCompared}
@@ -154,7 +153,6 @@ NewFurniture.propTypes = {
   children: PropTypes.node,
   changeFavorites: PropTypes.func,
   changeActivePage: PropTypes.func,
-  changeCompare: PropTypes.func,
   categories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
