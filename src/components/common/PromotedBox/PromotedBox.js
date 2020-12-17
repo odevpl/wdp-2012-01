@@ -9,7 +9,7 @@ const PromotedBox = ({ products, changeFavorites }) => {
   return (
     <div className={styles.root}>
       {productId.map(item => (
-        <div key={item.id} className='col-3'>
+        <div key={item.id} className={`col-3 ${styles.colProduct}`}>
           <ProductBox
             featured={true}
             key={item.id}
