@@ -18,6 +18,7 @@ class MainLayout extends React.Component {
  handleResize = () => this.setState({
   screenWidth: window.innerWidth
 
+  /* !!! Nie rozumiem dlaczego blad z this wystepuje*/
   this.props.action({
        screenWidth: this.state.screenWidth,
      }),
