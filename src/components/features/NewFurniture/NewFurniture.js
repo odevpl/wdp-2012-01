@@ -9,6 +9,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     visible: true,
+    screenWidth: 0,
   };
 
   handlePageChange(newPage) {
@@ -17,6 +18,10 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  handleScreenWidth(newScreenWidth) {
+    this.setState({ screenWidth: newScreenWidth });
   }
 
   componentDidUpdate(_prevProps, prevState) {
@@ -33,18 +38,18 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products, viewport } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { categories, products } = this.props;
+    const { activeCategory, activePage, screenWidth } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
-    // if ({viewport} <= 767) {
-    //   const pagesCount = Math.ceil(categoryProducts.length / 3);
-    // } else if (768 <= {viewport} && {viewport} <= 1024) {
-    //   const pagesCount = Math.ceil(categoryProducts.length / 3);
-    // } else if ({viewport} > 1025) {
-    //   const pagesCount = Math.ceil(categoryProducts.length / 8);
-    // }
+    if ({screenWidth} <= 767) {
+      const pagesCount = Math.ceil(categoryProducts.length / 2);
+    } else if (768 <= {screenWidth} && {screenWidth} <= 1024) {
+      const pagesCount = Math.ceil(categoryProducts.length / 3);
+    } else if ({screenWidth} > 1025) {
+      const pagesCount = Math.ceil(categoryProducts.length / 8);
+    }
 
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
@@ -132,7 +137,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
-  viewport: PropTypes.number,
+  screenWidth: PropTypes.number,
 };
 
 NewFurniture.defaultProps = {

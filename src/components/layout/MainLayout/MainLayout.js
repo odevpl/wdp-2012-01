@@ -1,35 +1,47 @@
-import React, { useEffect, useSelector, useState, useDispatch } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Promoted from '../Promoted/Promoted';
 
-function useWindowWidth() {
-  const [width, setWidth] = useState([window.innerWidth]);
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth([window.innerWidth]);
-    };
-    window.addEventListener('resize', handleResize);
-  }, []);
-  return width;
+class MainLayout extends React.Component {
+  static propTypes = {
+    action: PropTypes.func,
+    children: PropTypes.node,
+   }
+
+ state = {
+   screenWidth: 0,
+ }
+
+ handleResize = () => this.setState({
+  screenWidth: window.innerWidth
+
+  this.props.action({
+       screenWidth: this.state.screenWidth,
+     }),
+  });
+
+ componentDidMount() {
+   this.handleResize();
+   window.addEventListener('resize', this.handleResize)
+ }
+
+ componentWillUnmount() {
+   window.removeEventListener('resize', this.handleResize)
+ }
+
+ render() {
+   return (
+     <div>
+         <Header />
+         <Promoted />
+         {this.props.children}
+         <Footer />
+     </div>
+   );
+ }
 }
-
-const MainLayout = ({ children }) => {
-  console.log(useWindowWidth());
-  return (
-    <div>
-      <Header />
-      <Promoted />
-      {children}
-      <Footer />
-    </div>
-  );
-};
-
-MainLayout.propTypes = {
-  children: PropTypes.node,
-};
 
 export default MainLayout;

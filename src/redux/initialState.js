@@ -479,7 +479,7 @@ const initialState = {
   cart: {
     products: [],
   },
-  screenWidth: 1440,
+  screenWidth: 0,
 };
 
 export default initialState;

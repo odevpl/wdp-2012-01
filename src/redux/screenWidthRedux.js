@@ -5,7 +5,7 @@ const reducerName = 'screenWidth';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
-const CHANGE_SCREEN_WIDTH = createActionName('CHANGE_SCREEN_WIDTH ');
+const CHANGE_SCREEN_WIDTH = createActionName('CHANGE_SCREEN_WIDTH');
 
 /* action creators */
 export const changeScreenWidth = payload => ({ payload, type: CHANGE_SCREEN_WIDTH });

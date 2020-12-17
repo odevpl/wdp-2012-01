@@ -4,8 +4,8 @@ import NewFurniture from './NewFurniture';
 
 import { getAll } from '../../../redux/categoriesRedux.js';
 import { getNew } from '../../../redux/productsRedux.js';
-import { getScreenWidth } from '../../../redux/screenWidthReducer.js';
-import { changeFavorites, changeScreenWidth } from '../../../redux/productsRedux';
+import { getScreenWidth } from '../../../redux/screenWidthRedux.js';
+import { changeFavorites } from '../../../redux/productsRedux';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
@@ -15,7 +15,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeFavorites: newState => dispatch(changeFavorites(newState)),
-  changeScreenWidth: newState => dispatch(changeFavorites(newState)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewFurniture);

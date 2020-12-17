@@ -4,7 +4,7 @@ import initialState from './initialState';
 import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
-import screenWidthReducer from './screenWidthReducer';
+import screenWidthReducer from './screenWidthRedux';
 
 // define reducers
 const reducers = {
