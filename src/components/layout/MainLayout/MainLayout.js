@@ -7,7 +7,7 @@ import Promoted from '../Promoted/Promoted';
 
 class MainLayout extends React.Component {
   static propTypes = {
-    action: PropTypes.func,
+    changeScreenWidth : PropTypes.func,
     children: PropTypes.node,
    }
 
@@ -16,13 +16,10 @@ class MainLayout extends React.Component {
  }
 
  handleResize = () => this.setState({
-  screenWidth: window.innerWidth
-
-  /* !!! Nie rozumiem dlaczego blad z this wystepuje*/
-  this.props.action({
-       screenWidth: this.state.screenWidth,
-     }),
+  // screenWidth: window.innerWidth
+  changeScreenWidth(screenWidth)
   });
+
 
  componentDidMount() {
    this.handleResize();
