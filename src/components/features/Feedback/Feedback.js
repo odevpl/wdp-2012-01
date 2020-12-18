@@ -29,6 +29,10 @@ class Feedback extends React.Component {
     this.setState({ activePage: newPage });
   }
 
+  handleFadeOut() {
+    this.setState({ visible: false });
+  }
+
   render() {
     const { feedbacks } = this.props;
     const { activePage } = this.state;
