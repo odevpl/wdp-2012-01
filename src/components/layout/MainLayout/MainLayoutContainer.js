@@ -5,7 +5,7 @@ import MainLayout from './MainLayout';
 import { changeScreenWidth } from '../../../redux/screenWidthRedux';
 
 const mapDispatchToProps = dispatch => ({
-    changeScreenWidth: newState => dispatch(changeScreenWidth(newState)),
-  });
+  changeScreenWidth: newState => dispatch(changeScreenWidth(newState)),
+});
 
-  export default connect(mapDispatchToProps)(NewFurniture);
+export default connect(mapDispatchToProps)(MainLayout);
