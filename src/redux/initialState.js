@@ -6,6 +6,32 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  feedbacks: [
+    {
+      id: 1,
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      user: 'Anna K.',
+      status: 'Furniture client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10349',
+    },
+    {
+      id: 2,
+      text:
+        'Fusce efficitur erat sodales purus tristique pulvinar. Proin et consequat urna. Quisque maximus interdum enim, nec sollicitudin nisi maximus in. Fusce facilisis, enim et sagittis.',
+      user: 'Wojtek O.',
+      status: 'Furniture client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10352',
+    },
+    {
+      id: 3,
+      text:
+        'ras rhoncus dapibus nisi, at placerat velit interdum sed. Suspendisse pharetra venenatis sapien, quis porta nunc accumsan quis. Proin blandit rhoncus pharetra. Ut nec semper.',
+      user: 'Patryk T.',
+      status: 'Super client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10350',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -571,7 +597,7 @@ const initialState = {
     text3a: 'SPECIAL',
     text3b: 'COLLECTION',
     textInfo: 'SAVE UP 45% OF FURNITURE',
-    },
+  },
   brand: {
     imageFirst:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/eab093a0a25c7994ab8cc0b64eaadd00.png',
