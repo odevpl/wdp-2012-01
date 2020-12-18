@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PromotedBox.module.scss';
 import ProductBox from '../ProductBox/ProductBox';
 import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
+import Carousel from '../SwipeCarousel/SwipeCarousel';
 
 const PromotedBox = ({ products, changeFavorites }) => {
   const productId = products.filter(item => item.id === 'aenean-ru-bristique-1');
+  const [activePage, setActivePage] = useState(0);
+  const swipeRight = () => {
+    setActivePage(activePage === 1 ? activePage : activePage + 1);
+  };
+  const swipeLeft = () => {
+    setActivePage(activePage === -1 ? activePage : activePage - 1);
+  };
   return (
     <div className={styles.root}>
       {productId.map(item => (
@@ -19,24 +27,79 @@ const PromotedBox = ({ products, changeFavorites }) => {
         </div>
       ))}
       <div className={`col-9 ${styles.col}`}>
-        <img
-          alt='furnitureImage'
-          src='https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
-          className={styles.image}
-        ></img>
-        <Button className={styles.button} variant='small'>
-          SHOP NOW
-        </Button>
-        <div className={styles.promotedText}>
-          <h3>
-            INDOOR <strong>FURNITURE</strong>
-          </h3>
-          <h2>SAVE UP TO 50% OF ALL FURNITURE</h2>
-        </div>
-        <div className={styles.slider}>
-          <Button className={styles.slider}>&lt;</Button>
-          <Button className={styles.slider}>&gt;</Button>
-        </div>
+        <Carousel
+          activePage={activePage}
+          changeActivePage={(activeP, change) => {
+            if (change === 1) {
+              return setActivePage(activeP === 1 ? activeP : activeP + 1);
+            } else if (change === -1) {
+              return setActivePage(activeP === -1 ? activeP : activeP - 1);
+            }
+          }}
+        >
+          {activePage === 0 && (
+            <div className={styles.activePage}>
+              <img
+                alt='furnitureImage'
+                src='https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                className={styles.image}
+              ></img>
+              <Button className={styles.button} variant='small'>
+                SHOP NOW
+              </Button>
+              <div className={styles.promotedText}>
+                <h3>
+                  INDOOR <strong>FURNITURE</strong>
+                </h3>
+                <h2>SAVE UP TO 50% OF ALL FURNITURE</h2>
+              </div>
+            </div>
+          )}
+          {activePage === -1 && (
+            <div className={styles.activePage}>
+              <img
+                alt='furnitureImage'
+                src='https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                className={styles.image}
+              ></img>
+              <Button className={styles.button} variant='small'>
+                SHOP NOW
+              </Button>
+              <div className={styles.promotedText}>
+                <h3>
+                  BEST <strong>FURNITURE</strong>
+                </h3>
+                <h2>SALE LASTS ONLY THIS WEEK</h2>
+              </div>
+            </div>
+          )}
+          {activePage === 1 && (
+            <div className={styles.activePage}>
+              <img
+                alt='furnitureImage'
+                src='https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                className={styles.image}
+              ></img>
+              <Button className={styles.button} variant='small'>
+                SHOP NOW
+              </Button>
+              <div className={styles.promotedText}>
+                <h3>
+                  BEST <strong>FURNITURE</strong>
+                </h3>
+                <h2>DONT MISS IT</h2>
+              </div>
+            </div>
+          )}
+          <div className={styles.slider}>
+            <Button onClick={swipeLeft} className={styles.slider}>
+              &lt;
+            </Button>
+            <Button onClick={swipeRight} className={styles.slider}>
+              &gt;
+            </Button>
+          </div>
+        </Carousel>
       </div>
     </div>
   );
