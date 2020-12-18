@@ -12,9 +12,12 @@
   padding: 10px 30px;
 
   &:not(.noHover):hover {
-    color: $btn-color-white !important;
     background-color: $primary;
     text-decoration: none;
+    background-position: 0 100%;
+    color: $menu-bar-white;
+    border-color: $primary;
+    background-image: $background-image;
   }
 }
 

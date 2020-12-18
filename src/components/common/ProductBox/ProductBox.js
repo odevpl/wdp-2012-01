@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faStar,
   faExchangeAlt,
   faShoppingBasket,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import Timer from '../../features/Timer/Timer';
+import RatingStars from '../RatingStars/RatingStarsContainer';
 
 const ProductBox = ({
   name,
@@ -24,6 +24,10 @@ const ProductBox = ({
   id,
   changeFavorites,
   featured,
+  changeCompare,
+  compare,
+  getCompared,
+  myStars,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -68,17 +72,7 @@ const ProductBox = ({
     </div>
     <div className={styles.content}>
       <h5>{name}</h5>
-      <div className={styles.stars}>
-        {[1, 2, 3, 4, 5].map(i => (
-          <div key={i}>
-            {i <= stars ? (
-              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-            ) : (
-              <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-            )}
-          </div>
-        ))}
-      </div>
+      <RatingStars id={id} stars={stars} myStars={myStars} />
     </div>
     <div className={styles.line}></div>
     <div className={styles.actions}>
@@ -93,7 +87,17 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline'>
+        <Button
+          noHover
+          onClick={() => {
+            if (getCompared.find(item => item.id === id)) {
+              changeCompare(id);
+            } else if (getCompared.length <= 3) {
+              changeCompare(id);
+            }
+          }}
+          variant={compare ? 'active' : 'disactive'}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -126,6 +130,11 @@ ProductBox.propTypes = {
   id: PropTypes.string,
   changeFavorites: PropTypes.func,
   featured: PropTypes.bool,
+  changeCompare: PropTypes.func,
+  makeComparingList: PropTypes.func,
+  compare: PropTypes.bool,
+  getCompared: PropTypes.array,
+  myStars: PropTypes.number,
 };
 
 export default ProductBox;

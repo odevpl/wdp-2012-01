@@ -13,12 +13,14 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 40,
-      stars: 2,
+      stars: 1,
       promo: 'sale',
       newFurniture: true,
       image:
         'https://www.fortywinks.com.au/getmedia/f4614e1e-9b00-476b-bdcd-e28afa3d34db/jackson_bed_frame-front.jpg?width=1200',
       favorites: true,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -26,12 +28,14 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: null,
-      stars: 2,
+      stars: 3,
       promo: 'sale',
       newFurniture: true,
       image:
         'https://images-na.ssl-images-amazon.com/images/I/817%2BqPbDo8L._SX425_.jpg',
       favorites: false,
+      compare: false,
+      myStars: 4,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -39,12 +43,14 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 45,
-      stars: 2,
+      stars: 4,
       promo: 'sale',
       newFurniture: true,
       image:
         'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202040/0168/anton-solid-wood-bed-o.jpg',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -58,6 +64,8 @@ const initialState = {
       image:
         'https://ii1.pepperfry.com/media/catalog/product/k/o/1100x1210/kosmo-new-port-queen-size-bed-with-storage-in-vermount-finish-by-spacewood-kosmo-new-port-queen-size-tiaya2.jpg',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -71,6 +79,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -84,6 +94,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3753435/pexels-photo-3753435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -97,6 +109,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -110,6 +124,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -123,6 +139,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3773581/pexels-photo-3773581.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -136,6 +154,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -149,6 +169,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1879061/pexels-photo-1879061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -162,6 +184,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4119831/pexels-photo-4119831.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -175,6 +199,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3144580/pexels-photo-3144580.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -188,6 +214,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2029731/pexels-photo-2029731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -201,6 +229,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -214,6 +244,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2705/bed-bedroom-room-furniture.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -227,6 +259,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2416932/pexels-photo-2416932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -240,6 +274,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4276617/pexels-photo-4276617.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -253,6 +289,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3935331/pexels-photo-3935331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -266,6 +304,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3935353/pexels-photo-3935353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -279,6 +319,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3773577/pexels-photo-3773577.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -292,6 +334,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -305,6 +349,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -318,6 +364,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2029722/pexels-photo-2029722.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'banean-du-antique-1',
@@ -331,6 +379,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2762247/pexels-photo-2762247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'banean-du-antique-2',
@@ -344,6 +394,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1321290/pexels-photo-1321290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'banean-du-antique-3',
@@ -357,6 +409,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/2180883/pexels-photo-2180883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'ulean-su-raqute-1',
@@ -370,6 +424,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'ulean-su-raqute-2',
@@ -383,6 +439,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'ulean-su-raqute-3',
@@ -396,6 +454,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4352247/pexels-photo-4352247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'argean-la-fata-1',
@@ -409,6 +469,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'argean-la-fata-2',
@@ -422,6 +484,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/842950/pexels-photo-842950.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'argean-la-fata-3',
@@ -435,6 +499,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'dagadan-ge-jala-1',
@@ -448,6 +514,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'dagadan-ge-jala-2',
@@ -461,6 +529,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
     {
       id: 'dagadan-ge-jala-3',
@@ -474,6 +544,8 @@ const initialState = {
       image:
         'https://images.pexels.com/photos/4577410/pexels-photo-4577410.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       favorites: false,
+      compare: false,
+      myStars: 0,
     },
   ],
   cart: {

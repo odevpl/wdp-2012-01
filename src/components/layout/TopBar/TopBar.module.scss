@@ -21,6 +21,16 @@
           color: $primary;
           text-decoration: none;
           cursor: pointer;
+          position: relative;
+          animation: myfirst 10s 2;
+          animation-direction: alternate;    
+        }
+        @keyframes myfirst {
+          0%   {color: $primary; left: 0px; top: 0px;}
+          25%  {color: $primary; left: 200px; top: 0px;}
+          50%  {color: $primary; left: 200px; top: 200px;}
+          75%  {color: $primary; left: 0px; top: 200px;}
+          100% {color: $primary; left: 0px; top: 0px;}
         }
       }
     }

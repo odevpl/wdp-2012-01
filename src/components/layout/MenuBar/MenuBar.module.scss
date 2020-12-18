@@ -38,8 +38,17 @@
       border-top: 4px solid $menu-bar-white;
       font-weight: 500;
       letter-spacing: 1px;
+      transition: $transition1;
+      background-position: 100% 0;
 
       &:hover,
+      &:focus {
+        background-position: 0 100%;
+        background-color: $primary;
+        color: $menu-bar-white;
+        border-color: $primary;
+        background-image: $background-image1;
+      }
       &.active {
         background-color: $primary;
         color: $menu-bar-white;
