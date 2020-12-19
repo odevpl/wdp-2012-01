@@ -7,39 +7,39 @@ import Promoted from '../Promoted/Promoted';
 
 class MainLayout extends React.Component {
   static propTypes = {
-    changeScreenWidth : PropTypes.func,
+    changeScreenWidth: PropTypes.func,
     children: PropTypes.node,
-   }
+  };
 
- state = {
-   screenWidth: 0,
- }
+  state = {
+    screenWidth: 0,
+  };
 
- handleResize = () => this.setState({
-  // screenWidth: window.innerWidth
-  changeScreenWidth(screenWidth)
-  });
+  handleResize = () =>
+    this.setState({
+      //an eeror that props changeScreenWidth is not defined//
+      screenWidth: this.props.changeScreenWidth,
+    });
 
+  componentDidMount() {
+    this.handleResize();
+    window.addEventListener('resize', this.handleResize);
+  }
 
- componentDidMount() {
-   this.handleResize();
-   window.addEventListener('resize', this.handleResize)
- }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
 
- componentWillUnmount() {
-   window.removeEventListener('resize', this.handleResize)
- }
-
- render() {
-   return (
-     <div>
-         <Header />
-         <Promoted />
-         {this.props.children}
-         <Footer />
-     </div>
-   );
- }
+  render() {
+    return (
+      <div>
+        <Header />
+        <Promoted />
+        {this.props.children}
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default MainLayout;

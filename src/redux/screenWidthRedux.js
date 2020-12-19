@@ -1,7 +1,9 @@
 export const getScreenWidth = ({ screenWidth }) => screenWidth;
 
-export const setScreenWidth = (screenWidth, value) =>  screenWidth = value;
+export const setScreenWidth = (screenWidth, value) => {
+  screenWidth = value;
   return screenWidth;
+};
 
 /* action name creator */
 const reducerName = 'screenWidth';
