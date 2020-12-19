@@ -17,7 +17,6 @@ const Brand = ({ brand }) => {
     event.preventDefault();
     setActivePage(activePage === -1 ? activePage : activePage - 1);
   };
-
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -39,7 +38,6 @@ const Brand = ({ brand }) => {
                   &lt;
                 </Button>
               </div>
-
               {activePage === 0 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -62,7 +60,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === -1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -85,7 +82,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === 1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -108,7 +104,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               <div className={styles.slider}>
                 <Button onClick={swipeRight} className={styles.slider}>
                   &gt;
@@ -117,7 +112,6 @@ const Brand = ({ brand }) => {
             </div>
           </Carousel>
         </MediaQuery>
-
         <MediaQuery query='(min-device-width: 768px) and (max-device-width:1023px)'>
           <Carousel
             activePage={activePage}
@@ -135,7 +129,6 @@ const Brand = ({ brand }) => {
                   &lt;
                 </Button>
               </div>
-
               {activePage === 0 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -152,7 +145,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === -1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -169,7 +161,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === 1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -186,7 +177,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               <div className={styles.slider}>
                 <Button onClick={swipeRight} className={styles.slider}>
                   &gt;
@@ -195,7 +185,6 @@ const Brand = ({ brand }) => {
             </div>
           </Carousel>
         </MediaQuery>
-
         <MediaQuery query='(max-device-width: 767px)'>
           <Carousel
             activePage={activePage}
@@ -213,7 +202,6 @@ const Brand = ({ brand }) => {
                   &lt;
                 </Button>
               </div>
-
               {activePage === 0 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -224,7 +212,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === -1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -235,7 +222,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               {activePage === 1 && (
                 <div className={styles.activePage}>
                   <div className={`col ${styles.col}`}>
@@ -246,7 +232,6 @@ const Brand = ({ brand }) => {
                   </div>
                 </div>
               )}
-
               <div className={styles.slider}>
                 <Button onClick={swipeRight} className={styles.slider}>
                   &gt;

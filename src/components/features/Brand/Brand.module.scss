@@ -47,11 +47,6 @@
   }
 }
 
-.row {
-  flex-wrap: nowrap !important;
-  justify-content: center !important;
-}
-
 /* MEDIA */
 @media (max-width: 767px) {
   .root {
@@ -77,6 +72,3 @@
     }
   }
 }
-
-
-
