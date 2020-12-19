@@ -55,12 +55,8 @@
 /* MEDIA */
 @media (max-width: 767px) {
   .root {
-    .row {
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-      }
+    margin-right: -42px;
     .col {
-  
       img {
           width: 90px;
           height: 90px;
@@ -72,20 +68,11 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .root {
-    .container {
-      max-width: 100%;
-      .row .carousel{
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        width:100%;
-        height: 100%;
-        .col {
-          img {
-          width: 90px;
-          height: 90px;
-          margin: 0 3px 0 7px;
-          }
-        }
+    .col {
+      img {
+      width: 110px;
+      height: 110px;
+      margin: 0 3px 0 7px;
       }
     }
   }
