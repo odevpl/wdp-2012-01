@@ -35,6 +35,12 @@
     }
   }
 
+  .activePage {
+    overflow: hidden;
+    max-height: 430px;
+    display: flex;
+  }
+
   .slider:hover {
     background-color: $primary;
   }
