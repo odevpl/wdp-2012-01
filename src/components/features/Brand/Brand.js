@@ -8,10 +8,12 @@ import Carousel from '../../common/SwipeCarousel/SwipeCarousel';
 
 const Brand = ({ brand }) => {
   const [activePage, setActivePage] = useState(0);
-  const swipeRight = () => {
+  const swipeRight = event => {
+    event.preventDefault();
     setActivePage(activePage === 1 ? activePage : activePage + 1);
   };
-  const swipeLeft = () => {
+  const swipeLeft = event => {
+    event.preventDefault();
     setActivePage(activePage === -1 ? activePage : activePage - 1);
   };
 
@@ -31,11 +33,7 @@ const Brand = ({ brand }) => {
         >
           <div className='row'>
             <div className={styles.slider}>
-              <Button
-                href='javascript:void();'
-                onClick={swipeLeft}
-                className={styles.slider}
-              >
+              <Button onClick={swipeLeft} className={styles.slider}>
                 &lt;
               </Button>
             </div>
@@ -110,11 +108,7 @@ const Brand = ({ brand }) => {
             )}
 
             <div className={styles.slider}>
-              <Button
-                href='javascript:void();'
-                onClick={swipeRight}
-                className={styles.slider}
-              >
+              <Button onClick={swipeRight} className={styles.slider}>
                 &gt;
               </Button>
             </div>
