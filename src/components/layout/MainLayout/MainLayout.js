@@ -6,18 +6,30 @@ import Footer from '../Footer/Footer';
 import Promoted from '../Promoted/Promoted';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 
-const MainLayout = ({ children }) => (
-  <div>
-    <Header />
-    <Promoted />
-    {children}
-    <Feedback />
-    <Footer />
-  </div>
-);
 
-MainLayout.propTypes = {
-  children: PropTypes.node,
-};
+class MainLayout extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    changeScreenWidth: PropTypes.func,
+  };
+
+  render() {
+    this.props.changeScreenWidth(window.innerWidth);
+
+    window.addEventListener('resize', () => {
+      this.props.changeScreenWidth(window.innerWidth);
+    });
+
+    return (
+      <div>
+        <Header />
+        <Promoted />
+        {this.props.children}
+        <Footer />
+        <Feedback />
+      </div>
+    );
+  }
+}
 
 export default MainLayout;

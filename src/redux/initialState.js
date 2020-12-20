@@ -626,6 +626,7 @@ const initialState = {
     image15:
       'https://image.freepik.com/free-vector/elegant-circle-logo-icon_126523-971.jpg',
   },
+  screenWidth: 0,
 };
 
 export default initialState;

@@ -52,11 +52,21 @@ class NewFurniture extends React.Component {
       changeFavorites,
       changeCompare,
       getCompared,
+      screenWidth,
     } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    let pagesCount = Math.ceil(categoryProducts.length / 8);
+
+    if (screenWidth <= 767) {
+      pagesCount = Math.ceil(categoryProducts.length / 2);
+    } else if (768 <= screenWidth && screenWidth <= 1024) {
+      pagesCount = Math.ceil(categoryProducts.length / 3);
+    } else if (screenWidth > 1025) {
+      pagesCount = Math.ceil(categoryProducts.length / 8);
+    }
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -146,6 +156,7 @@ class NewFurniture extends React.Component {
 }
 
 NewFurniture.propTypes = {
+  screenWidth: PropTypes.number,
   getCompared: PropTypes.array,
   changeCompare: PropTypes.func,
   children: PropTypes.node,

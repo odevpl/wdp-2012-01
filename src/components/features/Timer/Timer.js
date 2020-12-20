@@ -83,6 +83,6 @@ class Timer extends Component {
 }
 
 Timer.propTypes = {
-  startDate: PropTypes.string,
+  startDate: PropTypes.number,
 };
 export default Timer;
