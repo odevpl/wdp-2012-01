@@ -2,15 +2,14 @@
 
 .root {
   background-color: $btn-color-white;
-  border: 1px solid $product-box-border;
   margin-bottom: 2rem;
+  margin-top: 3rem;
   display: flex;
   max-height: 431px;
 
   .image {
-    position: relative;
-    object-fit: cover;
-    max-width: 95%;
+    object-fit: contain;
+    max-width: 100%;
     max-height: 95%;
   }
 
@@ -60,7 +59,18 @@
     }
   }
 
+  .activePage {
+    overflow: hidden;
+    max-height: 430px;
+  }
+
   .slider:hover {
     background-color: $primary;
+  }
+
+  @media (max-width: 768px) {
+    .colProduct {
+      display: none;
+    }
   }
 }
