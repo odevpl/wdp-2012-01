@@ -33,10 +33,6 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
-  handleScreenWidth(newScreenWidth) {
-    this.setState({ screenWidth: newScreenWidth });
-  }
-
   componentDidUpdate(_prevProps, prevState) {
     if (
       this.state.activeCategory !== prevState.activeCategory ||
@@ -57,20 +53,21 @@ class NewFurniture extends React.Component {
       changeFavorites,
       changeCompare,
       getCompared,
+      screenWidth,
     } = this.props;
-    const { activeCategory, activePage, screenWidth } = this.state;
+    const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
-    if ({screenWidth} <= 767) {
-      const pagesCount = Math.ceil(categoryProducts.length / 2);
-    } else if (768 <= {screenWidth} && {screenWidth} <= 1024) {
-      const pagesCount = Math.ceil(categoryProducts.length / 3);
-    } else if ({screenWidth} > 1025) {
-      const pagesCount = Math.ceil(categoryProducts.length / 8);
-    }
+    let pagesCount = Math.ceil(categoryProducts.length / 8);
 
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    if (screenWidth <= 767) {
+      pagesCount = Math.ceil(categoryProducts.length / 2);
+    } else if (768 <= screenWidth && screenWidth <= 1024) {
+      pagesCount = Math.ceil(categoryProducts.length / 3);
+    } else if (screenWidth > 1025) {
+      pagesCount = Math.ceil(categoryProducts.length / 8);
+    }
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -88,6 +85,16 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
+
+    let boxesStyler = 'col-3';
+    if (pagesCount === 3) {
+      boxesStyler = 'col-3';
+    } else if (pagesCount === 8) {
+      boxesStyler = 'col-4';
+    } else if (pagesCount === 12) {
+      boxesStyler = 'col-6';
+    }
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -138,9 +145,12 @@ class NewFurniture extends React.Component {
               }`}
             >
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(
+                  activePage * (categoryProducts.length / pagesCount),
+                  (activePage + 1) * (categoryProducts.length / pagesCount)
+                )
                 .map(item => (
-                  <div key={item.id} className='col-3'>
+                  <div key={item.id} className={boxesStyler}>
                     <ProductBox
                       changeFavorites={changeFavorites}
                       changeCompare={changeCompare}

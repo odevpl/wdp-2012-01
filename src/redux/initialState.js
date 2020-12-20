@@ -6,6 +6,32 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+  feedbacks: [
+    {
+      id: 1,
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      user: 'Anna K.',
+      status: 'Furniture client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10349',
+    },
+    {
+      id: 2,
+      text:
+        'Fusce efficitur erat sodales purus tristique pulvinar. Proin et consequat urna. Quisque maximus interdum enim, nec sollicitudin nisi maximus in. Fusce facilisis, enim et sagittis.',
+      user: 'Wojtek O.',
+      status: 'Furniture client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10352',
+    },
+    {
+      id: 3,
+      text:
+        'ras rhoncus dapibus nisi, at placerat velit interdum sed. Suspendisse pharetra venenatis sapien, quis porta nunc accumsan quis. Proin blandit rhoncus pharetra. Ut nec semper.',
+      user: 'Patryk T.',
+      status: 'Super client',
+      img: 'https://projects.kodilla.com/secure/useravatar?avatarId=10350',
+    },
+  ],
   products: [
     {
       id: 'aenean-ru-bristique-1',
@@ -571,20 +597,34 @@ const initialState = {
     text3a: 'SPECIAL',
     text3b: 'COLLECTION',
     textInfo: 'SAVE UP 45% OF FURNITURE',
-    },
+  },
   brand: {
-    imageFirst:
+    image1:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/eab093a0a25c7994ab8cc0b64eaadd00.png',
-    imageSecond:
+    image2:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/01273596e4e92b9de8e8a11cd4ed455e.png',
-    imageThird:
+    image3:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/71a9c6a80e57e1ee631a929191346262.png',
-    imageFourth:
+    image4:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/c3a241ae6d1e03513dfed6f5061f4a4b.png',
-    imageFifth:
+    image5:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/e1179e27ce0f55a3bd31d92e9c751731.png',
-    imageSixth:
+    image6:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/5d6266e7bbcdb8fb017c10000ead2fd3.png',
+    image7: 'https://image.freepik.com/free-vector/fashion-logo_23-2148558723.jpg',
+    image8:
+      'https://image.freepik.com/free-vector/fashion-shop-logo-template_23-2148593858.jpg',
+    image9:
+      'https://image.freepik.com/free-vector/fashion-brand-logo-template-with-tagline_23-2148661989.jpg',
+    image10: 'https://image.freepik.com/free-psd/dark-fashion-logo-mock-up_1097-15.jpg',
+    image11: 'https://image.freepik.com/free-vector/vintage-boutique-logo_1057-438.jpg',
+    image12: 'https://image.freepik.com/free-vector/butterfly-logo-icon_126523-249.jpg',
+    image13:
+      'https://image.freepik.com/free-vector/luxury-boutique-logo-templates_15146-127.jpg',
+    image14:
+      'https://image.freepik.com/free-vector/hipster-design-studio-logo-vector_53876-40513.jpg',
+    image15:
+      'https://image.freepik.com/free-vector/elegant-circle-logo-icon_126523-971.jpg',
   },
   screenWidth: 0,
 };

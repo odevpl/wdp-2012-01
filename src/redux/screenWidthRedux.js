@@ -1,5 +1,7 @@
-export const getScreenWidth = ({ screenWidth }) => screenWidth;
+/* selectors */
+export const screenWidth = ({ screenWidth }) => screenWidth;
 
+/* function */
 export const setScreenWidth = (screenWidth, value) => {
   screenWidth = value;
   return screenWidth;
