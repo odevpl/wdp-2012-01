@@ -49,8 +49,8 @@ class MainLayout extends React.Component {
         <Header />
         <Promoted />
         {this.props.children}
-        <Footer />
         <Feedback />
+        <Footer />
       </div>
     );
   }
