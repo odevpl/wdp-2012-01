@@ -11,6 +11,7 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
     visible: true,
     comparinList: [],
+    screenWidth: 0,
   };
 
   changeActivePage = (activePage, change) => {
@@ -30,6 +31,10 @@ class NewFurniture extends React.Component {
 
   handleCategoryChange(newCategory) {
     this.setState({ activeCategory: newCategory });
+  }
+
+  handleScreenWidth(newScreenWidth) {
+    this.setState({ screenWidth: newScreenWidth });
   }
 
   componentDidUpdate(_prevProps, prevState) {
@@ -53,9 +58,18 @@ class NewFurniture extends React.Component {
       changeCompare,
       getCompared,
     } = this.props;
-    const { activeCategory, activePage } = this.state;
+    const { activeCategory, activePage, screenWidth } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
+
+    if ({screenWidth} <= 767) {
+      const pagesCount = Math.ceil(categoryProducts.length / 2);
+    } else if (768 <= {screenWidth} && {screenWidth} <= 1024) {
+      const pagesCount = Math.ceil(categoryProducts.length / 3);
+    } else if ({screenWidth} > 1025) {
+      const pagesCount = Math.ceil(categoryProducts.length / 8);
+    }
+
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const dots = [];
@@ -168,6 +182,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  screenWidth: PropTypes.number,
 };
 
 NewFurniture.defaultProps = {

@@ -586,6 +586,7 @@ const initialState = {
     imageSixth:
       'https://cdn.shopify.com/shopifycloud/hatchful-web/assets/5d6266e7bbcdb8fb017c10000ead2fd3.png',
   },
+  screenWidth: 0,
 };
 
 export default initialState;

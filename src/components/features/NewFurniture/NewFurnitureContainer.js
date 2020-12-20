@@ -9,11 +9,13 @@ import {
   changeCompare,
   getCompared,
 } from '../../../redux/productsRedux';
+import { getScreenWidth } from '../../../redux/screenWidthRedux.js';
 
 const mapStateToProps = state => ({
   categories: getAll(state),
   products: getNew(state),
   getCompared: getCompared(state),
+  screenWidth: getScreenWidth(state),
 });
 
 const mapDispatchToProps = dispatch => ({
