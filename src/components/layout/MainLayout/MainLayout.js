@@ -12,14 +12,15 @@ class MainLayout extends React.Component {
   };
 
   state = {
-    screenWidth: 0,
+    screenWidth: window.innerWidth,
   };
 
-  handleResize = () =>
+  handleResize = () => {
+    const changeScreenWidth = this.props.changeScreenWidth(this.state.screenWidth);
     this.setState({
-      //an eeror that props changeScreenWidth is not defined//
-      screenWidth: this.props.changeScreenWidth,
+      screenWidth: changeScreenWidth,
     });
+  };
 
   componentDidMount() {
     this.handleResize();
