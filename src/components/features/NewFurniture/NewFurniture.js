@@ -84,6 +84,16 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
+
+    let boxesStyler = 'col-3';
+    if (pagesCount === 3) {
+      boxesStyler = 'col-3';
+    } else if (pagesCount === 8) {
+      boxesStyler = 'col-4';
+    } else if (pagesCount === 12) {
+      boxesStyler = 'col-6';
+    }
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -134,9 +144,12 @@ class NewFurniture extends React.Component {
               }`}
             >
               {categoryProducts
-                .slice(activePage * 8, (activePage + 1) * 8)
+                .slice(
+                  activePage * (categoryProducts.length / pagesCount),
+                  (activePage + 1) * (categoryProducts.length / pagesCount)
+                )
                 .map(item => (
-                  <div key={item.id} className='col-3'>
+                  <div key={item.id} className={boxesStyler}>
                     <ProductBox
                       changeFavorites={changeFavorites}
                       changeCompare={changeCompare}
