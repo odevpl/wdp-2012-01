@@ -47,7 +47,6 @@ export const changeFavorites = payload => ({ payload, type: CHANGE_FAVORITE });
 export const changeCompare = payload => ({ payload, type: CHANGE_COMPARE });
 export const changeMyRating = payload => ({ payload, type: CHANGE_MY_RATING });
 
-
 /* reducer */
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {

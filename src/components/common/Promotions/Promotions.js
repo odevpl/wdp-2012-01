@@ -5,7 +5,7 @@ import styles from './Promotions.module.scss';
 const Promotions = ({ Promotion }) => (
   <div className={`container ${styles.container}`}>
     <div className='row'>
-      <div className={`col-6 ${styles.column}`}>
+      <div className={`col-md-6 col-sm-12 ${styles.column}`}>
         <img src={Promotion.sofa} alt='dsa' />
         <div className={styles.wrapperText}>
           <h2>{Promotion.text1a}</h2>
@@ -13,7 +13,7 @@ const Promotions = ({ Promotion }) => (
           <p>{Promotion.textbargain}</p>
         </div>
       </div>
-      <div className='col-6'>
+      <div className={`col-md-6 col-sm-12 ${styles.wrapperColumn}`}>
         <div className={`col-12 ${styles.column1}`}>
           <img className={styles.firstChair} src={Promotion.firstChair} alt='dsa' />
           <div className={styles.secondWrapper}>
